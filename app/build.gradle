@@ -30,6 +30,43 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    flavorDimensions "theme"
+    flavorDimensions "functionality"
+    productFlavors {
+        red_filesystem {
+            applicationIdSuffix ".redFilesystem"
+            dimension "theme"
+            dimension "functionality"
+            resValue "string", "app_name", "Scanulator Red - Filesystem"
+            buildConfigField "boolean", "USE_FILESYSTEM", "true"
+        }
+        red_camera {
+            applicationIdSuffix ".redCamera"
+            dimension "theme"
+            dimension "functionality"
+            resValue "string", "app_name", "Scanulator Red - Camera"
+            buildConfigField "boolean", "USE_FILESYSTEM", "false"
+        }
+        green_filesystem {
+            applicationIdSuffix ".greenFilesystem"
+            dimension "theme"
+            dimension "functionality"
+            resValue "string", "app_name", "Scanulator Green - Filesystem"
+            buildConfigField "boolean", "USE_FILESYSTEM", "true"
+        }
+        green_camera {
+            applicationIdSuffix ".greenCamera"
+            dimension "theme"
+            dimension "functionality"
+            resValue "string", "app_name", "Scanulator Green - Camera"
+            buildConfigField "boolean", "USE_FILESYSTEM", "false"
+        }
+    }
 }
 
 dependencies {
