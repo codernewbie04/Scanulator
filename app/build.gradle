@@ -15,6 +15,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "BASE_API", "\"https://api.ocr.space/\"")
+        buildConfigField("String", "API_KEY", "\"K86352242488957\"")
     }
 
     buildTypes {
@@ -78,4 +81,17 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+
+    //Retrofit Gson Converter
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
+    //Okhttp3 Logging
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+
+    //Gson Converter
+    implementation 'com.google.code.gson:gson:2.8.9'
 }
