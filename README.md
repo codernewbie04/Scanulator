@@ -20,8 +20,8 @@
 
 ## Preview
 <div align="center">
-  <img src="assets/1.jpeg" alt="Splash Screen" width="124" height="249"/>
-  <img src="assets/2.jpeg" alt="Main" width="124" height="249"/>
+  <img src="assets/1.jpg" alt="Splash Screen" width="124" height="249"/>
+  <img src="assets/2.jpg" alt="Main" width="124" height="249"/>
 </div>
 
 ### Key Features
