@@ -38,6 +38,7 @@ android {
 
     buildFeatures {
         buildConfig true
+        viewBinding true
     }
 
     flavorDimensions "theme"
@@ -73,7 +74,7 @@ android {
             dimension "functionality"
             resValue "string", "app_name", "Scanulator Green - Camera"
             buildConfigField "boolean", "USE_FILESYSTEM", "false"
-            buildConfigField "String", "THEME", "\"red\""
+            buildConfigField "String", "THEME", "\"green\""
         }
     }
 }

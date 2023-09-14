@@ -11,6 +11,7 @@ data class ApiResponse(
     @SerializedName("OCRExitCode") var OCRExitCode: Int,
     @SerializedName("IsErroredOnProcessing") var IsErroredOnProcessing: Boolean,
     @SerializedName("ProcessingTimeInMilliseconds") var ProcessingTimeInMilliseconds: String? = null,
-    @SerializedName("SearchablePDFURL") var SearchablePDFURL: String? = null
+    @SerializedName("SearchablePDFURL") var SearchablePDFURL: String? = null,
+    @SerializedName("ErrorMessage") var ErrorMessage: ArrayList<String> = arrayListOf(),
 
 )
