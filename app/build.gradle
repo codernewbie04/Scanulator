@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -47,6 +49,7 @@ android {
             dimension "functionality"
             resValue "string", "app_name", "Scanulator Red - Filesystem"
             buildConfigField "boolean", "USE_FILESYSTEM", "true"
+            buildConfigField "String", "THEME", "\"red\""
         }
         red_camera {
             applicationIdSuffix ".redCamera"
@@ -54,6 +57,7 @@ android {
             dimension "functionality"
             resValue "string", "app_name", "Scanulator Red - Camera"
             buildConfigField "boolean", "USE_FILESYSTEM", "false"
+            buildConfigField "String", "THEME", "\"red\""
         }
         green_filesystem {
             applicationIdSuffix ".greenFilesystem"
@@ -61,6 +65,7 @@ android {
             dimension "functionality"
             resValue "string", "app_name", "Scanulator Green - Filesystem"
             buildConfigField "boolean", "USE_FILESYSTEM", "true"
+            buildConfigField "String", "THEME", "\"green\""
         }
         green_camera {
             applicationIdSuffix ".greenCamera"
@@ -68,6 +73,7 @@ android {
             dimension "functionality"
             resValue "string", "app_name", "Scanulator Green - Camera"
             buildConfigField "boolean", "USE_FILESYSTEM", "false"
+            buildConfigField "String", "THEME", "\"red\""
         }
     }
 }
@@ -83,15 +89,26 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
 
-    //Retrofit
+    /* Retrofit */
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
 
-    //Retrofit Gson Converter
+    /* Retrofit Gson Converter */
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
 
-    //Okhttp3 Logging
+    /* Okhttp3 Logging */
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
 
-    //Gson Converter
+    /* Gson Converter */
     implementation 'com.google.code.gson:gson:2.8.9'
+
+    /* Livedata */
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
+
+    /* DI Using dagger hilt */
+    implementation 'androidx.hilt:hilt-navigation-fragment:1.0.0'
+    implementation "com.google.dagger:hilt-android:2.46"
+    kapt "com.google.dagger:hilt-compiler:2.46"
+
+    /* Coil Image Loader */
+    implementation("io.coil-kt:coil:2.2.2")
 }

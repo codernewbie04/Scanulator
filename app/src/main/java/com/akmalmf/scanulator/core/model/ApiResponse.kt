@@ -8,8 +8,8 @@ import com.google.gson.annotations.SerializedName
  */
 data class ApiResponse(
     @SerializedName("ParsedResults") var ParsedResults: ArrayList<ParsedResults> = arrayListOf(),
-    @SerializedName("OCRExitCode") var OCRExitCode: Int? = null,
-    @SerializedName("IsErroredOnProcessing") var IsErroredOnProcessing: Boolean? = null,
+    @SerializedName("OCRExitCode") var OCRExitCode: Int,
+    @SerializedName("IsErroredOnProcessing") var IsErroredOnProcessing: Boolean,
     @SerializedName("ProcessingTimeInMilliseconds") var ProcessingTimeInMilliseconds: String? = null,
     @SerializedName("SearchablePDFURL") var SearchablePDFURL: String? = null
 
