@@ -26,6 +26,7 @@
 
 ### Key Features
 * Scanning Math
+* Multiple Build Variants
 ## Technology
 * Kotlin
 * Dagger-Hilt
